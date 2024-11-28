@@ -1,31 +1,49 @@
 {
   "constraints": [
     "a > b + c",
-    "a, b, c, d > 0",
-    "e = a - b - c",
-    "f = e * d"
+    "a > 0",
+    "b > 0",
+    "c > 0",
+    "d > 0",
+    "e == a - b - c",
+    "f == e * d"
   ],
   "question": "{person1}’s ducks lay {x} eggs per day. {person1} eats {y} for breakfast every morning and bakes muffins for her friends every day with {z}. {person1} sells the remainder at the farmers' market daily for {currencysymbol1}{d} per fresh duck egg. How much in dollars does {person1} make every day at the farmers' market?",
   "answer": "Janet sells {x} - {y} - {z} = <<a - b - c = e>>e duck eggs a day.\nShe makes e * d = $<<e * d = f>>f every day at the farmer’s market.\n#### f"
 }
 {
   "constraints": [
-    "a, b > 0",
+    "a > 0",
+    "b > 0",
     "p > 100",
-    "c = (p / 100) * a",
-    "d = a + b",
-    "e = c + a",
-    "f = e - d"
+    "c == (p / 100) * a",
+    "c % 1 == 0"
+    "d == a + b",
+    "e == c + a",
+    "f == e - d"
   ],
   "question": "{person1} decides to try flipping a house. {person1} buys a house for {currencysymbol1}{a} and then puts in {currencysymbol1}{b} in repairs. This increased the value of the house by {p}%. How much profit did {person1} make?",
   "answer": "The cost of the house and repairs came out to {a}+{b}=$<<{a}+{b}={d}>>{d}\nHe increased the value of the house by {a}*({p}/100)=<<{a}*({p}/100)={c}>>{c}\nSo the new value of the house is {c}+{a}=$<<{c}+{a}={e}>>{e}\nSo he made a profit of {e}-{d}=$<<{e}-{d}={f}>>{f}\n#### {f}"
 }
 {
   "constraints": [
-    "a, b, c > 0",
-    "d = a * b",
-    "e = d * c"
+    "a > 0",
+    "b > 0",
+    "c > 0",
+    "d == a * b",
+    "e == d * c"
   ],
   "question": "{person1} decides to run {a} sprints {b} times a week. {person1} runs {c} meters each sprint. How many total meters does {person1} run a week?",
   "answer": "{person1} sprints {a}*{b}=<<{a}*{b}={d}>>{d} times\nSo {person1} runs {d}*{c}=<<{d}*{c}={e}>>{e} meters\n#### {e}"
+}
+{
+  "constraints": [
+    "c > 0",
+    "n > 0",
+    "t == c * n",
+    "m1 + m2 < t",
+    "m3 == t - m1 - m2"
+  ],
+  "question": "Every day, {person1} feeds each of her chickens {c} cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy. {person1} gives the chickens their feed in three separate meals. In the morning, {person1} gives her flock of chickens {m1} cups of feed. In the afternoon, {person1} gives her chickens another {m2} cups of feed. How many cups of feed does {person1} need to give her chickens in the final meal of the day if the size of {person1}'s flock is {n} chickens?",
+  "answer": "If each chicken eats {c} cups of feed per day, then for {n} chickens they would need {c}*{n}=<<{c}*{n}={t}>>{t} cups of feed per day.\nIf she feeds the flock {m1} cups of feed in the morning, and {m2} cups in the afternoon, then the final meal would require {t}-{m1}-{m2}=<<{t}-{m1}-{m2}={m3}>>{m3} cups of chicken feed.\n#### {m3}"
 }
