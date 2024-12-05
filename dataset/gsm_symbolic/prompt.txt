@@ -3,25 +3,27 @@ You are given a math problem involving numerical values. Your task is to transfo
 2.	Define constraints for these placeholders to ensure the problem remains valid.
 3.	Rewrite the question using the placeholders.
 4.	Provide a template for the solution, replacing specific calculations with variable expressions.
-Example:
-{"question": "{person1} decides to try flipping a house. {person1} buys a house for {currencysymbol1}80,000 and then puts in {currencysymbol1}50,000 in repairs. This increased the value of the house by 150%. How much profit did {person1} make?", "answer": "The cost of the house and repairs came out to 80,000+50,000=$<<80000+50000=130000>>130,000\nHe increased the value of the house by 80,000*1.5=<<80000*1.5=120000>>120,000\nSo the new value of the house is 120,000+80,000=$<<120000+80000=200000>>200,000\nSo he made a profit of 200,000-130,000=$<<200000-130000=70000>>70,000\n#### 70000"}
-Output Template:
+
+Example Question:
+{"question": "{place1} has twice as many sheep as {place2}. {place2} has 4 times as many sheep as {place3}. How many sheep do {place1}, {place2}, and {place3} have together if {place3} has 20 sheep?", "answer": "If Seattle has 20 sheep, Charleston has 4 * 20 sheep = <<20*4=80>>80 sheep\nToulouse has twice as many sheep as Charleston, which is 2 * 80 sheep = <<2*80=160>>160 sheep\nTogether, the three has 20 sheep + 160 sheep + 80 sheep = <<20+160+80=260>>260 sheep\n#### 260"}
+
+Example Output:
 {
   "constraints": [
     "a > 0",
-    "b > 0",
-    "p > 100",
-    "c == (p / 100) * a",
-    "c % 1 == 0"
-    "d == a + b",
-    "e == c + a",
-    "f == e - d"
+    "x > 0",
+    "y > 0",
+    "b == y * a",
+    "c == x * b",
+    "d == a + b + c"
   ],
-  "question": "{person1} decides to try flipping a house. {person1} buys a house for {currencysymbol1}{a} and then puts in {currencysymbol1}{b} in repairs. This increased the value of the house by {p}%. How much profit did {person1} make?",
-  "answer": "The cost of the house and repairs came out to {a}+{b}=$<<{a}+{b}={d}>>{d}\nHe increased the value of the house by {a}*({p}/100)=<<{a}*({p}/100)={c}>>{c}\nSo the new value of the house is {c}+{a}=$<<{c}+{a}={e}>>{e}\nSo he made a profit of {e}-{d}=$<<{e}-{d}={f}>>{f}\n#### {f}"
+  "question": "{place1} has {x} times as many sheep as {place2}. {place2} has {y} times as many sheep as {place3}. How many sheep do {place1}, {place2}, and {place3} have together if {place3} has {a} sheep?",
+  "answer": "If {place3} has {a} sheep, {place2} has {x} * {y} sheep = <<{y}*{a}={b}>>{b} sheep\n{place1} has {x} times as many sheep as {place2}, which is {x} * {b} sheep = <<{x}*{b}={c}>>{c} sheep\nTogether, the three have {a} sheep + {b} sheep + {c} sheep = <<{a}+{b}+{c}={d}>>{d} sheep\n#### {d}"
 }
+
 Instructions:
 •	Replace each specific number in the question with a placeholder.
+•	Also replace words like "two" and "half" with placeholder values
 •	Ensure that the constraints logically describe relationships between these placeholders.
 •	Use consistent formatting for placeholders and constraints.
 •	Output in json format
