@@ -1,3 +1,4 @@
 __pycache__/
 .DS_Store
 dataset/gsm_symbolic/openai_key.txt
+dataset/gsm_symbolic/dataset_makers/prompt_files/openai_key.txt
