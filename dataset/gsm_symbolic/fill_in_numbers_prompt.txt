@@ -1,0 +1,2 @@
+Given a list of constraints on variable names associated with a math problems, find valid values for those variables to fill in that math problem. Each value in the question and answer is surrounded by curly braces is a variable, so it is formatted as {variable}. You should output a json mapping each variable to a valid value.
+
