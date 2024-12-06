@@ -1,0 +1,18 @@
+I need you to add irrelevant information to a math problem to teach people what part of the problem to attend to and what to avoid. I’ll give you some examples, specific instructions, then the the math problem to modify. 
+
+Example 1
+Original Question: A loaf of sourdough at the cafe costs $9. Muffins cost $3 each. If we purchase 10 loaves of sourdough and 10 muffins, how much more do the sourdough loaves cost compared to the muffins?
+
+Modified question: A loaf of sourdough at the cafe costs $9. Muffins cost $3 each. If we purchase 10 loaves of sourdough and 10 muffins, how much more do the sourdough loaves cost compared to the muffins, if we plan to donate 3 loaves of sourdough and 2 muffins from this purchase?
+
+Example 2
+Original Question: Liam wants to buy some school supplies. He buys 24 erasers that now cost $6.75 each, 10 notebooks that now cost $11.0 each, and a ream of bond paper that now costs $19. How much should Liam pay now?
+
+Modified Question: Liam wants to buy some school supplies. He buys 24 erasers that now cost $6.75 each, 10 notebooks that now cost $11.0 each, and a ream of bond paper that now costs $19. How much should Liam pay now, assuming that due to inflation, prices were 10% cheaper last year?
+
+Example 3
+Toulouse has twice as many sheep as Charleston. Charleston has 4 times as many sheep as Seattle. How many sheep do Toulouse, Charleston, and Seattle have together if Seattle has 20 sheep?
+
+Modified Question: Toulouse has twice as many sheep as Charleston. Charleston has 4 times as many sheep as Seattle. How many sheep do Toulouse, Charleston, and Seattle have together if Seattle has 20 sheep given that the sheep in Seattle are twice as small as the sheep in Charleston?
+
+In both of these cases, you can see supplemental information was added at the end which doesn’t actually affect the answer to the problem. This is what you will be doing. Notice that the supplemental information always includes numeric values to enhance the red herring. Be creative. For example, you could say that a specific number of objects are smaller than others, the prices were different by a certain amount last year, or any other irrelevant information. Given these instructions, generate a modified question for the given question. Your output should just be a string with the modified question.
