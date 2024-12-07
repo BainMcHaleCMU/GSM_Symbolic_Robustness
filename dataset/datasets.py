@@ -43,4 +43,4 @@ class GSM8K_Val_Dataset(torch.utils.data.Dataset):
     def __getitem__(self, idx):
         q = self.tok_question['input_ids'][idx]
         q_mask = self.tok_question['attention_mask'][idx]
-        return q, q_mask, self.data['answer'][idx]
+        return self.data['q_id'][idx], q, q_mask, self.data['answer'][idx]
